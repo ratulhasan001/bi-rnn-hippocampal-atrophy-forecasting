@@ -1,0 +1,178 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram name="Biology-Informed Loss" id="bio-loss-diagram">
+    <mxGraphModel dx="1871" dy="1205" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1920" pageHeight="1200" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FB;strokeColor=#CCCCCC;strokeWidth=1.5;arcSize=3;" value="" vertex="1">
+          <mxGeometry height="980" width="1870" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h1" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;" value="&lt;b&gt;&lt;font color=&quot;#34588A&quot;&gt;NETWORK OUTPUTS&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="190" x="52.5" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;" value="&lt;b&gt;&lt;font color=&quot;#168266&quot;&gt;INVERSE TRANSFORM&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="220" x="385" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;" value="&lt;b&gt;&lt;font color=&quot;#168266&quot;&gt;INTERMEDIATES&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="180" x="712.5" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="h4" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;" value="&lt;b&gt;&lt;font color=&quot;#D65040&quot;&gt;LOSS COMPONENTS&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="240" x="1015" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="h5" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;" value="&lt;b&gt;&lt;font color=&quot;#1E1E1E&quot;&gt;TOTAL LOSS&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="220" x="1615" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="pred" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FA;strokeColor=#34588A;strokeWidth=1.5;fontSize=20;fontFamily=Helvetica;arcSize=12;align=center;" value="&lt;b&gt;\(\hat{y} \in [0,1]\)&lt;/b&gt;&lt;br&gt;&lt;font&gt;scaled prediction&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="185" x="55" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="targ" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FA;strokeColor=#34588A;strokeWidth=1.5;fontSize=20;fontFamily=Helvetica;arcSize=12;align=center;" value="&lt;b&gt;\(y \in [0,1]\)&lt;/b&gt;&lt;br&gt;&lt;font&gt;scaled target&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="185" x="55" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="inp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FA;strokeColor=#34588A;strokeWidth=1.5;fontSize=20;fontFamily=Helvetica;arcSize=12;align=center;" value="&lt;b&gt;\(\mathbf{x}_{:,-1,:} \in [0,1]\)&lt;/b&gt;&lt;br&gt;&lt;font&gt;last input timestep&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="185" x="55" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="invpred" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F5F1;strokeColor=#168266;strokeWidth=1.5;fontSize=20;fontFamily=Helvetica;arcSize=12;align=center;" value="&lt;b&gt;\(\hat{v} = \hat{y} \cdot R + v_{\min}\)&lt;/b&gt;&lt;br&gt;&lt;font&gt;\(\hat{v} \in \mathbb{R}^{+} \; [\text{mm}^3]\)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="225" x="380" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="invlast" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F5F1;strokeColor=#168266;strokeWidth=1.5;fontSize=20;fontFamily=Helvetica;arcSize=12;align=center;" value="&lt;b&gt;\(v_{\text{last}} = x_{-1} \cdot R + v_{\min}\)&lt;/b&gt;&lt;br&gt;&lt;font&gt;\(v_{\text{last}} \in \mathbb{R}^{+} \; [\text{mm}^3]\)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="225" x="380" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="growth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F5F1;strokeColor=#168266;strokeWidth=1.5;fontSize=20;fontFamily=Helvetica;arcSize=12;align=center;" value="&lt;b&gt;\(\Delta v = \hat{v} - v_{\text{last}}\)&lt;/b&gt;&lt;br&gt;&lt;font&gt;&lt;code&gt;growth_mm3&lt;/code&gt; — volumetric change \([\text{mm}^3]\)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="231" x="684" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="vollost" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F5F1;strokeColor=#168266;strokeWidth=1.8;fontSize=20;fontFamily=Helvetica;arcSize=12;align=center;strokeDashArray=6 3;" value="&lt;b&gt;\(\delta v = v_{\text{last}} - \hat{v} = -\Delta v\)&lt;/b&gt;&lt;br&gt;&lt;font&gt;&lt;code&gt;volume_lost_mm3&lt;/code&gt; — atrophy \([\text{mm}^3]\)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="82" width="225" x="690" y="653" as="geometry" />
+        </mxCell>
+        <mxCell id="mse_label" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;" value="&lt;b&gt;&lt;font color=&quot;#D65040&quot;&gt;① Data Loss&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="160" x="960" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="mse" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCECEA;strokeColor=#D65040;strokeWidth=1.8;fontSize=20;fontFamily=Helvetica;arcSize=10;align=center;" value="$$\mathcal{L}_{\mathrm{data}} = \frac{1}{N}\sum_{i}\!\left(\hat{y}_i - y_i\right)^2$$" vertex="1">
+          <mxGeometry height="80" width="370" x="960" y="149" as="geometry" />
+        </mxCell>
+        <mxCell id="traj_label" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;" value="&lt;b&gt;&lt;font color=&quot;#ED9B28&quot;&gt;② Monotonicity Loss&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="210" x="960" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="traj" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF6E8;strokeColor=#ED9B28;strokeWidth=1.8;fontSize=20;fontFamily=Helvetica;arcSize=10;align=center;" value="$$\mathcal{L}_{\mathrm{traj}} = \frac{1}{N \cdot R}\sum_{i} \max\!\left(0,\, \Delta v_i\right)$$" vertex="1">
+          <mxGeometry height="80" width="370" x="960" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="bio_label" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;" value="&lt;b&gt;&lt;font color=&quot;#7848A8&quot;&gt;③ Biological Plausibility Loss&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="270" x="960" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="bio" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEF9;strokeColor=#7848A8;strokeWidth=1.8;fontSize=20;fontFamily=Helvetica;arcSize=10;align=center;" value="$$\mathcal{L}_{\mathrm{bio}} = \frac{1}{N \cdot R}\sum_{i} \max\!\left(0,\, \Delta v_i - \tau \cdot v_{\mathrm{last},i}\right)$$" vertex="1">
+          <mxGeometry height="81" width="437" x="960" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="smooth_label" parent="1" style="text;html=1;align=left;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;" value="&lt;b&gt;&lt;font color=&quot;#1A7BBF&quot;&gt;④ Max Atrophy Smoothness Loss&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="290" x="960" y="688" as="geometry" />
+        </mxCell>
+        <mxCell id="smooth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F3FB;strokeColor=#1A7BBF;strokeWidth=1.8;fontSize=20;fontFamily=Helvetica;arcSize=10;align=center;" value="$$\mathcal{L}_{\mathrm{smooth}} = \frac{1}{N \cdot R}\sum_{i} \max\!\left(0,\; \delta v_i - \tau_{\mathrm{drop}} \cdot v_{\mathrm{last},i}\right)$$" vertex="1">
+          <mxGeometry height="80" width="502" x="960" y="728" as="geometry" />
+        </mxCell>
+        <mxCell id="sigma" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E1E1E;strokeWidth=2;fontSize=18;fontFamily=Helvetica;align=center;" value="&lt;b&gt;&lt;font style=&quot;font-size:20px;&quot;&gt;Σ&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="55" width="55" x="1435" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="lam1" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=16;fontColor=#D65040;fontFamily=Helvetica;labelBackgroundColor=default;" value="× 1" vertex="1">
+          <mxGeometry height="20" width="40" x="1402" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="total" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#1E1E1E;strokeWidth=2;fontSize=20;fontFamily=Helvetica;arcSize=10;align=center;verticalAlign=middle;" value="&lt;b&gt;Total Loss&lt;/b&gt;&lt;br&gt;&lt;br&gt;\(\mathcal{L}_{\mathrm{total}} =\)&lt;br&gt;\(\mathcal{L}_{\mathrm{data}}\)&lt;br&gt;\(+\; \lambda_{\mathrm{bio}} \cdot \mathcal{L}_{\mathrm{bio}}\)&lt;br&gt;\(+\; \lambda_{\mathrm{traj}} \cdot \mathcal{L}_{\mathrm{traj}}\)&lt;br&gt;\(+\; \lambda_{\mathrm{smooth}} \cdot \mathcal{L}_{\mathrm{smooth}}\)" vertex="1">
+          <mxGeometry height="210" width="270" x="1590" y="362.5" as="geometry" />
+        </mxCell>
+        <mxCell id="notation" parent="1" style="text;html=1;align=left;strokeColor=#AAAAAA;fillColor=#FEFEFE;rounded=1;arcSize=5;strokeWidth=1;fontSize=15;" value="&lt;table style=&quot;border-collapse: collapse; font-family: Helvetica;&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;background:#E8E8E8;&quot;&gt;&lt;th style=&quot;padding:4px 10px;border:1px solid #AAAAAA;&quot;&gt;Symbol&lt;/th&gt;&lt;th style=&quot;padding:4px 10px;border:1px solid #AAAAAA;&quot;&gt;Description&lt;/th&gt;&lt;th style=&quot;padding:4px 10px;border:1px solid #AAAAAA;&quot;&gt;Symbol&lt;/th&gt;&lt;th style=&quot;padding:4px 10px;border:1px solid #AAAAAA;&quot;&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(R\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;data_range = v_max − v_min&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(\tau\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;growth tolerance (default 0.01 = 1%)&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#F8F8F8;&quot;&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(v_{\min}\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;data_min (MinMax scaler)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(\lambda_{\text{bio}}\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;biological plausibility penalty weight&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(\hat{v},\, v_{\text{last}}\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;unscaled hippocampal volumes (mm³)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(\lambda_{\text{traj}}\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;monotonicity penalty weight&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#F8F8F8;&quot;&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(\Delta v\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;predicted volumetric change (mm³) — &lt;code&gt;growth_mm3&lt;/code&gt;&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(\lambda_{\text{smooth}}\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;max atrophy smoothness penalty weight&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(\delta v = -\Delta v\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;volume lost / atrophy (mm³) — &lt;code&gt;volume_lost_mm3&lt;/code&gt;&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(\tau_{\text{drop}}\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;max allowed atrophy rate (default 5%)&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#F8F8F8;&quot;&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;\(N\)&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;batch size&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;dashed border&lt;/td&gt;&lt;td style=&quot;padding:3px 10px;border:1px solid #CCCCCC;&quot;&gt;derived intermediate variable (not a raw tensor)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="207" width="901" x="38" y="788" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="pred" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#34588A;strokeWidth=1.8;endArrow=block;endFill=1;" target="invpred">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="inp" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#34588A;strokeWidth=1.8;endArrow=block;endFill=1;" target="invlast">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="invpred" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.992;exitY=0.432;entryX=0;entryY=0.2;strokeColor=#168266;strokeWidth=1.8;endArrow=block;endFill=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="growth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="invlast" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.2;entryX=0;entryY=0.8;strokeColor=#168266;strokeWidth=1.8;endArrow=block;endFill=1;" target="growth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="invpred" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.9;entryX=0;entryY=0.2;strokeColor=#168266;strokeWidth=1.5;endArrow=block;endFill=1;dashed=1;" target="vollost">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="618" y="184" />
+              <mxPoint x="618" y="669" />
+              <mxPoint x="675" y="669" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="invlast" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.8;strokeColor=#168266;strokeWidth=1.5;endArrow=block;endFill=1;dashed=1;" target="vollost">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" edge="1" parent="1" source="pred" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.3;entryX=0;entryY=0.3;strokeColor=#D65040;strokeWidth=1.5;endArrow=block;endFill=1;" target="mse">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="256" y="148" />
+              <mxPoint x="256" y="118" />
+              <mxPoint x="770" y="118" />
+              <mxPoint x="770" y="173" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a8" edge="1" parent="1" source="targ" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.7;strokeColor=#D65040;strokeWidth=1.5;endArrow=block;endFill=1;" target="mse">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="400" />
+              <mxPoint x="600" y="205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a9" edge="1" parent="1" source="growth" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.3;entryX=0;entryY=0.5;strokeColor=#ED9B28;strokeWidth=1.5;endArrow=block;endFill=1;" target="traj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a10" edge="1" parent="1" source="growth" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.6;entryX=0;entryY=0.3;strokeColor=#7848A8;strokeWidth=1.5;endArrow=block;endFill=1;" target="bio">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a11" edge="1" parent="1" source="invlast" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.3;entryX=0;entryY=0.7;strokeColor=#7848A8;strokeWidth=1.5;endArrow=block;endFill=1;" target="bio">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="632" y="698" />
+              <mxPoint x="632" y="584" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a12" edge="1" parent="1" source="vollost" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.3;strokeColor=#1A7BBF;strokeWidth=1.8;endArrow=block;endFill=1;" target="smooth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a13" edge="1" parent="1" source="invlast" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.7;entryX=0;entryY=0.7;strokeColor=#1A7BBF;strokeWidth=1.5;endArrow=block;endFill=1;" target="smooth">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="628" y="722" />
+              <mxPoint x="628" y="773" />
+              <mxPoint x="782" y="773" />
+              <mxPoint x="782" y="784" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a14" edge="1" parent="1" source="mse" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.1;strokeColor=#D65040;strokeWidth=1.8;endArrow=block;endFill=1;" target="sigma">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a15" edge="1" parent="1" source="traj" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.38;strokeColor=#ED9B28;strokeWidth=1.8;endArrow=block;endFill=1;" target="sigma">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a16" edge="1" parent="1" source="bio" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.62;strokeColor=#7848A8;strokeWidth=1.8;endArrow=block;endFill=1;" target="sigma">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a17" edge="1" parent="1" source="smooth" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.9;strokeColor=#1A7BBF;strokeWidth=1.8;endArrow=block;endFill=1;" target="sigma">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a18" edge="1" parent="1" source="sigma" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#1E1E1E;strokeWidth=2.5;endArrow=block;endFill=1;" target="total">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lam4" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=16;fontColor=#1A7BBF;fontFamily=Helvetica;labelBackgroundColor=default;" value="× λ_smooth" vertex="1">
+          <mxGeometry height="20" width="78" x="1435" y="644" as="geometry" />
+        </mxCell>
+        <mxCell id="lam2" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=16;fontColor=#ED9B28;fontFamily=Helvetica;labelBackgroundColor=default;" value="× λ_traj" vertex="1">
+          <mxGeometry height="20" width="62" x="1356" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="lam3" parent="1" style="text;html=1;align=center;strokeColor=none;fillColor=none;fontSize=16;fontColor=#7848A8;fontFamily=Helvetica;labelBackgroundColor=default;" value="× λ_bio" vertex="1">
+          <mxGeometry height="31" width="62" x="1373" y="494.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
