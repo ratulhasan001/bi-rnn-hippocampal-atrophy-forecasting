@@ -1,0 +1,13 @@
+method,level,coverage (%),mean width (mm³)
+Hybrid (conformal),0.5,50.7,194.2
+Hybrid (conformal),0.8,78.9,371.1
+Hybrid (conformal),0.9,89.4,529.8
+Hybrid (conformal),0.95,95.5,685.9
+LME + cov. (analytic),0.5,52.6,197.8
+LME + cov. (analytic),0.8,80.1,375.9
+LME + cov. (analytic),0.9,89.4,482.5
+LME + cov. (analytic),0.95,93.6,574.9
+LME + cov. (conformal),0.5,52.8,196.7
+LME + cov. (conformal),0.8,81.8,396.4
+LME + cov. (conformal),0.9,91.6,547.9
+LME + cov. (conformal),0.95,96.2,732.4

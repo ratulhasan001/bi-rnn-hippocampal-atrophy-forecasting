@@ -1,0 +1,58 @@
+Model,DX,MAE,CI low,CI high,n
+Persistence,CN,139.62,120.95,160.84,135
+Persistence,MCI,206.86,184.8,229.82,148
+Persistence,AD,219.9,195.27,246.74,99
+Population drift,CN,131.21,116.08,146.85,135
+Population drift,MCI,148.12,129.34,167.53,148
+Population drift,AD,144.61,124.95,167.18,99
+Linear extrapolation,CN,117.07,100.13,134.51,135
+Linear extrapolation,MCI,149.54,130.12,169.17,148
+Linear extrapolation,AD,173.25,144.67,205.95,99
+"ARIMA(1,1,0)",CN,152.72,131.44,175.58,135
+"ARIMA(1,1,0)",MCI,203.28,181.56,223.5,148
+"ARIMA(1,1,0)",AD,199.18,173.77,225.71,99
+Linear mixed-effects,CN,109.92,95.14,126.1,135
+Linear mixed-effects,MCI,126.63,109.35,144.61,148
+Linear mixed-effects,AD,129.12,110.41,148.62,99
+Linear mixed-effects + covariates,CN,109.84,94.75,127.51,135
+Linear mixed-effects + covariates,MCI,123.94,106.9,141.56,148
+Linear mixed-effects + covariates,AD,121.07,102.49,141.72,99
+XGBoost,CN,114.56,99.49,130.85,135
+XGBoost,MCI,135.11,116.91,154.22,148
+XGBoost,AD,130.13,112.33,150.47,99
+XGBoost + covariates,CN,114.13,98.84,130.39,135
+XGBoost + covariates,MCI,134.51,116.56,152.71,148
+XGBoost + covariates,AD,123.65,106.05,144.26,99
+Standard GRU,CN,115.2,100.35,131.43,135
+Standard GRU,MCI,139.72,121.87,157.74,148
+Standard GRU,AD,132.28,113.25,152.05,99
+Standard LSTM,CN,117.69,102.71,133.8,135
+Standard LSTM,MCI,138.81,121.16,157.31,148
+Standard LSTM,AD,129.16,110.32,149.36,99
+Standard Bi-LSTM,CN,116.6,101.6,132.23,135
+Standard Bi-LSTM,MCI,143.2,124.53,161.8,148
+Standard Bi-LSTM,AD,130.43,111.24,151.11,99
+Bio-Informed GRU,CN,118.17,102.85,133.96,135
+Bio-Informed GRU,MCI,142.44,124.08,161.47,148
+Bio-Informed GRU,AD,128.44,109.66,149.42,99
+Bio-Informed LSTM,CN,118.62,103.32,134.74,135
+Bio-Informed LSTM,MCI,141.33,123.26,160.46,148
+Bio-Informed LSTM,AD,130.23,111.0,151.26,99
+Bio-Informed Bi-LSTM,CN,119.47,104.05,135.2,135
+Bio-Informed Bi-LSTM,MCI,143.15,124.99,162.19,148
+Bio-Informed Bi-LSTM,AD,126.93,107.74,148.25,99
+Standard GRU + clip,CN,115.2,100.35,131.43,135
+Standard GRU + clip,MCI,139.72,121.87,157.74,148
+Standard GRU + clip,AD,132.23,113.18,152.04,99
+Hard-corridor GRU,CN,117.92,103.0,133.47,135
+Hard-corridor GRU,MCI,140.32,122.55,158.89,148
+Hard-corridor GRU,AD,126.9,107.9,147.66,99
+Hybrid GRU (no corridor),CN,110.8,95.49,129.0,135
+Hybrid GRU (no corridor),MCI,126.24,108.59,145.37,148
+Hybrid GRU (no corridor),AD,124.09,105.69,143.93,99
+Hybrid Bio-Informed LSTM,CN,110.42,95.44,127.13,135
+Hybrid Bio-Informed LSTM,MCI,128.6,111.15,147.41,148
+Hybrid Bio-Informed LSTM,AD,124.11,105.69,144.3,99
+Hybrid Bio-Informed GRU,CN,111.01,96.09,127.77,135
+Hybrid Bio-Informed GRU,MCI,128.71,111.4,147.24,148
+Hybrid Bio-Informed GRU,AD,122.96,104.56,142.78,99

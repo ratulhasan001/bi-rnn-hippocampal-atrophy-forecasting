@@ -1,0 +1,13 @@
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Model & MAE mean & MAE sd & MAE 95\% CI low & MAE 95\% CI high & r (change) & Growth violation (\%) & Atrophy violation (\%) & p vs proposed (Holm) \\
+\midrule
+Linear mixed-effects + covariates & 118.214000 & 0.875000 & 107.788000 & 128.844000 & 0.391000 & 0.087000 & 0.000000 & 0.183000 \\
+Hybrid Bio-Informed GRU & 120.965000 & 0.381000 & 110.270000 & 131.463000 & 0.355000 & 0.000000 & 0.000000 & NaN \\
+Hybrid GRU (no corridor) & 120.222000 & 1.026000 & 109.214000 & 131.125000 & 0.337000 & 0.087000 & 0.000000 & 0.246000 \\
+Single network (no ensemble) & 121.183000 & 0.880000 & 110.460000 & 131.675000 & 0.347000 & 0.000000 & 0.000000 & 0.853000 \\
+Prior as input (not anchored) & 121.321000 & 0.174000 & 110.072000 & 132.194000 & 0.318000 & 0.000000 & 0.000000 & 0.853000 \\
+LME prior without covariates & 121.652000 & 0.245000 & 110.941000 & 132.316000 & 0.337000 & 0.000000 & 0.000000 & 0.847000 \\
+No LME prior (covariate RNN) & 129.472000 & 0.705000 & 118.697000 & 140.233000 & 0.196000 & 0.000000 & 0.000000 & 0.000000 \\
+\bottomrule
+\end{tabular}

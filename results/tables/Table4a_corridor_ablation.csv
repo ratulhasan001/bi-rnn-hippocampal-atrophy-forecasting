@@ -1,0 +1,8 @@
+Model,MAE mean,MAE sd,MAE 95% CI low,MAE 95% CI high,r (change),Growth violation (%),Atrophy violation (%),p vs MSE only (Holm)
+MSE only (Standard GRU),129.125,0.3,118.6,139.892,0.239,0.0,0.087,
+MSE + L_traj,130.555,0.107,119.539,141.501,0.181,0.0,0.0,1.0
+MSE + L_bio,130.513,1.816,119.646,141.416,0.198,0.0,0.087,0.661
+MSE + L_smooth,130.018,1.243,119.251,141.077,0.213,0.0,0.0,1.0
+MSE + L_traj + L_bio,130.482,0.451,119.547,141.502,0.177,0.0,0.0,1.0
+Full loss (Bio-Informed GRU),130.233,1.255,119.188,141.26,0.183,0.0,0.0,1.0
+"Full loss, fixed 5 %/visit cap",133.0,0.423,122.132,144.426,0.106,0.0,0.0,0.178

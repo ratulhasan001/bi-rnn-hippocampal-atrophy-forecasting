@@ -1,0 +1,63 @@
+\begin{tabular}{llrrrr}
+\toprule
+Model & DX & MAE & CI low & CI high & n \\
+\midrule
+Persistence & CN & 139.620000 & 120.950000 & 160.840000 & 135 \\
+Persistence & MCI & 206.860000 & 184.800000 & 229.820000 & 148 \\
+Persistence & AD & 219.900000 & 195.270000 & 246.740000 & 99 \\
+Population drift & CN & 131.210000 & 116.080000 & 146.850000 & 135 \\
+Population drift & MCI & 148.120000 & 129.340000 & 167.530000 & 148 \\
+Population drift & AD & 144.610000 & 124.950000 & 167.180000 & 99 \\
+Linear extrapolation & CN & 117.070000 & 100.130000 & 134.510000 & 135 \\
+Linear extrapolation & MCI & 149.540000 & 130.120000 & 169.170000 & 148 \\
+Linear extrapolation & AD & 173.250000 & 144.670000 & 205.950000 & 99 \\
+ARIMA(1,1,0) & CN & 152.720000 & 131.440000 & 175.580000 & 135 \\
+ARIMA(1,1,0) & MCI & 203.280000 & 181.560000 & 223.500000 & 148 \\
+ARIMA(1,1,0) & AD & 199.180000 & 173.770000 & 225.710000 & 99 \\
+Linear mixed-effects & CN & 109.920000 & 95.140000 & 126.100000 & 135 \\
+Linear mixed-effects & MCI & 126.630000 & 109.350000 & 144.610000 & 148 \\
+Linear mixed-effects & AD & 129.120000 & 110.410000 & 148.620000 & 99 \\
+Linear mixed-effects + covariates & CN & 109.840000 & 94.750000 & 127.510000 & 135 \\
+Linear mixed-effects + covariates & MCI & 123.940000 & 106.900000 & 141.560000 & 148 \\
+Linear mixed-effects + covariates & AD & 121.070000 & 102.490000 & 141.720000 & 99 \\
+XGBoost & CN & 114.560000 & 99.490000 & 130.850000 & 135 \\
+XGBoost & MCI & 135.110000 & 116.910000 & 154.220000 & 148 \\
+XGBoost & AD & 130.130000 & 112.330000 & 150.470000 & 99 \\
+XGBoost + covariates & CN & 114.130000 & 98.840000 & 130.390000 & 135 \\
+XGBoost + covariates & MCI & 134.510000 & 116.560000 & 152.710000 & 148 \\
+XGBoost + covariates & AD & 123.650000 & 106.050000 & 144.260000 & 99 \\
+Standard GRU & CN & 115.200000 & 100.350000 & 131.430000 & 135 \\
+Standard GRU & MCI & 139.720000 & 121.870000 & 157.740000 & 148 \\
+Standard GRU & AD & 132.280000 & 113.250000 & 152.050000 & 99 \\
+Standard LSTM & CN & 117.690000 & 102.710000 & 133.800000 & 135 \\
+Standard LSTM & MCI & 138.810000 & 121.160000 & 157.310000 & 148 \\
+Standard LSTM & AD & 129.160000 & 110.320000 & 149.360000 & 99 \\
+Standard Bi-LSTM & CN & 116.600000 & 101.600000 & 132.230000 & 135 \\
+Standard Bi-LSTM & MCI & 143.200000 & 124.530000 & 161.800000 & 148 \\
+Standard Bi-LSTM & AD & 130.430000 & 111.240000 & 151.110000 & 99 \\
+Bio-Informed GRU & CN & 118.170000 & 102.850000 & 133.960000 & 135 \\
+Bio-Informed GRU & MCI & 142.440000 & 124.080000 & 161.470000 & 148 \\
+Bio-Informed GRU & AD & 128.440000 & 109.660000 & 149.420000 & 99 \\
+Bio-Informed LSTM & CN & 118.620000 & 103.320000 & 134.740000 & 135 \\
+Bio-Informed LSTM & MCI & 141.330000 & 123.260000 & 160.460000 & 148 \\
+Bio-Informed LSTM & AD & 130.230000 & 111.000000 & 151.260000 & 99 \\
+Bio-Informed Bi-LSTM & CN & 119.470000 & 104.050000 & 135.200000 & 135 \\
+Bio-Informed Bi-LSTM & MCI & 143.150000 & 124.990000 & 162.190000 & 148 \\
+Bio-Informed Bi-LSTM & AD & 126.930000 & 107.740000 & 148.250000 & 99 \\
+Standard GRU + clip & CN & 115.200000 & 100.350000 & 131.430000 & 135 \\
+Standard GRU + clip & MCI & 139.720000 & 121.870000 & 157.740000 & 148 \\
+Standard GRU + clip & AD & 132.230000 & 113.180000 & 152.040000 & 99 \\
+Hard-corridor GRU & CN & 117.920000 & 103.000000 & 133.470000 & 135 \\
+Hard-corridor GRU & MCI & 140.320000 & 122.550000 & 158.890000 & 148 \\
+Hard-corridor GRU & AD & 126.900000 & 107.900000 & 147.660000 & 99 \\
+Hybrid GRU (no corridor) & CN & 110.800000 & 95.490000 & 129.000000 & 135 \\
+Hybrid GRU (no corridor) & MCI & 126.240000 & 108.590000 & 145.370000 & 148 \\
+Hybrid GRU (no corridor) & AD & 124.090000 & 105.690000 & 143.930000 & 99 \\
+Hybrid Bio-Informed LSTM & CN & 110.420000 & 95.440000 & 127.130000 & 135 \\
+Hybrid Bio-Informed LSTM & MCI & 128.600000 & 111.150000 & 147.410000 & 148 \\
+Hybrid Bio-Informed LSTM & AD & 124.110000 & 105.690000 & 144.300000 & 99 \\
+Hybrid Bio-Informed GRU & CN & 111.010000 & 96.090000 & 127.770000 & 135 \\
+Hybrid Bio-Informed GRU & MCI & 128.710000 & 111.400000 & 147.240000 & 148 \\
+Hybrid Bio-Informed GRU & AD & 122.960000 & 104.560000 & 142.780000 & 99 \\
+\bottomrule
+\end{tabular}

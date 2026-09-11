@@ -1,0 +1,20 @@
+\begin{tabular}{llrrrrrrrrr}
+\toprule
+A & B & MAE A & MAE B & ΔMAE (A−B) & CI low & CI high & A better in (\% subjects) & p (Wilcoxon) & p (Holm) & significant \\
+\midrule
+Hybrid Bio-Informed GRU & Persistence & 120.964730 & 186.476700 & -65.511980 & -77.526520 & -53.695690 & 71.465970 & 0.000000 & 0.000000 & True \\
+Hybrid Bio-Informed GRU & Population drift & 120.964730 & 141.232780 & -20.268050 & -26.403520 & -13.984670 & 63.874350 & 0.000000 & 0.000000 & True \\
+Hybrid Bio-Informed GRU & Linear extrapolation & 120.964730 & 144.210480 & -23.245750 & -33.083990 & -13.636110 & 57.068060 & 0.000090 & 0.000780 & True \\
+Hybrid Bio-Informed GRU & ARIMA(1,1,0) & 120.964730 & 184.352170 & -63.387440 & -75.673950 & -51.334880 & 70.942410 & 0.000000 & 0.000000 & True \\
+Hybrid Bio-Informed GRU & Linear mixed-effects & 120.964730 & 121.368940 & -0.404210 & -3.551560 & 2.748030 & 54.450260 & 0.351620 & 1.000000 & False \\
+Hybrid Bio-Informed GRU & Linear mixed-effects + covariates & 120.964730 & 118.213820 & 2.750910 & 0.021780 & 5.438790 & 45.287960 & 0.036650 & 0.256580 & False \\
+Hybrid Bio-Informed GRU & XGBoost & 120.964730 & 126.557020 & -5.592290 & -10.780940 & -0.528130 & 54.973820 & 0.012440 & 0.099520 & False \\
+Hybrid Bio-Informed GRU & XGBoost + covariates & 120.964730 & 124.491330 & -3.526600 & -8.009010 & 0.867540 & 52.879580 & 0.142190 & 0.568750 & False \\
+Hybrid Bio-Informed GRU & Bio-Informed GRU & 120.964730 & 130.232920 & -9.268200 & -13.066510 & -5.415530 & 57.329840 & 0.000010 & 0.000120 & True \\
+Hybrid Bio-Informed GRU & Standard GRU & 120.964730 & 129.125470 & -8.160750 & -11.687490 & -4.560420 & 58.115180 & 0.000060 & 0.000560 & True \\
+Hybrid Bio-Informed GRU & Hybrid GRU (no corridor) & 120.964730 & 120.222350 & 0.742370 & -1.122270 & 2.539210 & 44.764400 & 0.061600 & 0.369600 & False \\
+Bio-Informed GRU & Standard GRU & 130.232920 & 129.125470 & 1.107450 & -1.302260 & 3.494860 & 48.952880 & 0.571010 & 1.000000 & False \\
+Bio-Informed LSTM & Standard LSTM & 130.428890 & 128.845530 & 1.583360 & -0.137300 & 3.317600 & 45.026180 & 0.106320 & 0.531610 & False \\
+Bio-Informed Bi-LSTM & Standard Bi-LSTM & 130.580010 & 130.490030 & 0.089980 & -1.381090 & 1.607520 & 52.094240 & 0.839820 & 1.000000 & False \\
+\bottomrule
+\end{tabular}

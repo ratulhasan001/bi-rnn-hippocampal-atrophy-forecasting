@@ -1,0 +1,4 @@
+Architecture,Standard (%),Bio-Informed (%),Difference (pp),95% CI
+GRU,0.0,0.0,0.0,"[0.00, 0.00]"
+LSTM,0.09,0.0,-0.09,"[-0.26, 0.00]"
+Bi-LSTM,0.0,0.0,0.0,"[0.00, 0.00]"
