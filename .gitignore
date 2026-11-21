@@ -1,0 +1,30 @@
+# ADNI data must not be committed (ADNI Data Use Agreement)
+data/
+*.nii
+*.nii.gz
+*.mgz
+final_dataset_split.csv
+hippocampal_volumes*.csv
+Final_Model_Comparison.csv
+
+# Notebook outputs that contain subject-level data
+results/predictions/
+results_quick/
+results/figures/plos/
+results/figures/Fig8_prediction_intervals.*
+
+# Model weights
+*.pth
+*.pt
+
+# Python and Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS and editors
+.DS_Store
+.vscode/
+.idea/
